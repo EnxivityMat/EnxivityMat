@@ -1,3 +1,8 @@
+game.StarterGui:SetCore("SendNotification",{
+	Title = "Loaded!",
+	Text = "Press [T] to unlock the mouse",
+	Duration = 5
+})
 local playerGui = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 local player = game.Players.LocalPlayer
 local ScreenGui = Instance.new("ScreenGui",playerGui)
