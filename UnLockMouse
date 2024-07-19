@@ -16,7 +16,7 @@ UIS.InputBegan:Connect(function(input, GPE)
 			oldMouseIcon = mouse.Icon
 			B.Modal = true
 			e = true
-			mouse.Icon = nil
+			mouse.Icon = 0
 			return
 		else
 			B.Modal = false
