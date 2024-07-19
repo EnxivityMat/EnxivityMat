@@ -29,7 +29,7 @@ UIS.InputBegan:Connect(function(input, GPE)
 		end
 	end
 end)
-While True do
+while true do
 	EA.Position = UDim2.new(0,mouse.X,0,mouse.Y)
 	wait()
 end
