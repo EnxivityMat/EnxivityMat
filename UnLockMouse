@@ -1,0 +1,29 @@
+local playerGui = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+local player = game.Players.LocalPlayer
+local ScreenGui = Instance.new("ScreenGui",playerGui)
+local B = Instance.new("TextButton")
+B.BackgroundTransparency = 1
+B.Size = UDim2.new(0,0,0,0)
+B.Parent = ScreenGui
+B.Modal = false
+local e = false
+local UIS = game:GetService("UserInputService")
+local mouse = player:GetMouse()
+local oldMouseIcon = nil
+UIS.InputBegan:Connect(function(input, GPE) 
+	if input.KeyCode == Enum.KeyCode.T then 
+		if e == false then
+			oldMouseIcon = mouse.Icon
+			B.Modal = true
+			e = true
+			mouse.Icon = nil
+			return
+		else
+			B.Modal = false
+			e = false
+			mouse.Icon = oldMouseIcon
+			return
+		end
+
+	end
+end)
