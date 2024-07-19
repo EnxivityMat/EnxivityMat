@@ -7,6 +7,7 @@ B.Size = UDim2.new(0,0,0,0)
 B.Parent = ScreenGui
 B.Modal = false
 local e = false
+local Ea = false
 local UIS = game:GetService("UserInputService")
 local mouse = player:GetMouse()
 local oldMouseIcon = nil
@@ -16,14 +17,21 @@ UIS.InputBegan:Connect(function(input, GPE)
 			oldMouseIcon = mouse.Icon
 			B.Modal = true
 			e = true
+			Ea = true
 			mouse.Icon = "rbxassetid://12778786126"
 			return
 		else
 			B.Modal = false
 			e = false
+			Ea = false
 			mouse.Icon = oldMouseIcon
 			return
 		end
 
 	end
 end)
+
+while Ea == true do
+	mouse.Icon = "rbxassetid://12778786126"
+	wait()
+end
