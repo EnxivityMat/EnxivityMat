@@ -29,6 +29,7 @@ UIS.InputBegan:Connect(function(input, GPE)
 		end
 	end
 end)
-game["Run Service"].RenderStepped:Connect(function()
+While True do
 	EA.Position = UDim2.new(0,mouse.X,0,mouse.Y)
-end)
+	wait()
+end
